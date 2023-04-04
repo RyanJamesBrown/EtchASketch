@@ -1,15 +1,30 @@
+var gridSize = 25;
 const grid = document.getElementById("grid");
-makeRows(25);
+makeRows(gridSize);
 let rows = document.getElementsByClassName("gridRow");
-makeCells(25,25);
+makeCells(gridSize,gridSize);
 let clearButton = document.getElementById("clear");
-const gridSquares = document.querySelectorAll(".gridCell");
+let newGridButton = document.getElementById("newGrid");
+let gridSquares = document.querySelectorAll(".gridCell");
 
 clearButton.addEventListener('click',(e)=>{gridSquares.forEach((gridSquare) => {
     gridSquare.classList.remove("blue")
-}
+    }
+)})
 
-    )})
+newGridButton.addEventListener('click',(e)=>{
+    let newSize = prompt("What is the new grid size?");
+    grid.innerHTML = "";
+    makeRows(newSize);
+    rows = document.getElementsByClassName("gridRow");
+    makeCells(newSize,newSize);
+    gridSquares = document.querySelectorAll(".gridCell");
+    gridSquares.forEach((gridSquare) => {
+        gridSquare.addEventListener('mouseover',(e) =>{
+            gridSquare.classList.add("blue");
+        })
+    })
+})
 
 
 gridSquares.forEach((gridSquare) => {

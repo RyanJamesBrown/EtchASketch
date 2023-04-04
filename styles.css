@@ -1,10 +1,24 @@
 h3 {color:red}
 
+#grid {height:600px;
+    width:600px;
+    border: 2px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:stretch;
+
+}
+
 .gridRow{
-display:flex;}
+display:flex;
+flex-direction: row;
+justify-content: stretch;
+flex:1 1 auto;
+
+}
 
 .gridCell{
-width:15px;
-height:15px;}
+    flex: 1 1 auto;
+}
 
 .blue {background-color:blue;}
