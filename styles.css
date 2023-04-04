@@ -1,1 +1,10 @@
 h3 {color:red}
+
+.gridRow{
+display:flex;}
+
+.gridCell{
+width:15px;
+height:15px;}
+
+.blue {background-color:blue;}
